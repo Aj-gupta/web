@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex</title>
+        <style>
+            html,body{
+                margin:0px;
+                height: 100%;
+            }
+            /* body size increases by its content */
+            .container {
+                border:5px solid orange;
+                display: flex; /* to display a element to flex */
+                justify-content: center; /*flex-end for elemements starts from right and flex-start for elements start from left and center for center.This justify content by horizontal axis */
+                                        /* space-between for space b/w elemetns in div & space-around for space for 1st and last element*/
+                height: 100%; /* scroll come up because margin is set to 5px*/
+                /* align-items: flex-end; flex-end for bottom,flex-start for top(by default),center for center(elements center for verticle and horizontal */
+                                    /*stretch for auto height*/
+                box-sizing: border-box;
+                /* flex-direction: column; By default row, when flex-direction become column justify-content & align-items exchanges their functionality) */
+            }
+
+            .box{
+                width: 100px;
+                height:100px;
+                border:2px solid green;
+            }
+            /* element goes to top  */
+            #three{
+                align-self: flex-start; 
+                order: -1; /*By default order is 0*/
+            }
+            /*elemet goes to bottom*/
+            /* #six {
+                align-self: flex-end;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box" id="one">1</div>
+            <div class="box" id="two">2</div>
+            <div class="box" id="three">3</div>
+            <div class="box" id="four">4</div>
+            <div class="box" id="five">5</div>
+            <div class="box" id="six">6</div>
+
+        </div>
+    </body>
+</html>
